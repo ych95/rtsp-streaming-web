@@ -29,7 +29,7 @@ FFmpeg를 설치한 후, 시스템 환경 변수에 FFmpeg의 경로를 추가�
 ```bash
 git clone https://github.com/ych95/rtsp-streaming-web.git
 cd rtsp-streaming-web
-
+```
 
 ### **코드 설명**
 
@@ -65,7 +65,8 @@ app.listen(PORT, () => {
 });
 ```
 
-```#### 클라이언트 코드 (`public\rtsp_test_1\index.html`)
+#### 클라이언트 코드 (`public\rtsp_test_1\index.html`)
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,6 +137,8 @@ app.listen(PORT, () => {
 </body>
 </html>
 ```
+
+#### 클라이언트 코드 (`rtsp_test_1\index.js`)
 ```javascript
 const Stream = require('node-rtsp-stream');
 
