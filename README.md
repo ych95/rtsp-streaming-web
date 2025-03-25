@@ -3,6 +3,37 @@
 이 프로젝트는 **Node.js**와 **FFmpeg**를 활용하여 실시간 RTSP 스트리밍을 처리하고 웹페이지에서 스트리밍을 제공하는 시스템을 구현한 것입니다.  
 이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고, WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
 
+## 폴더 구조
+rtsp-streaming-web
+├── rtsp
+│   └── public
+│        ├── node_modules            # 공통 Node.js 모듈
+│        ├── rtsp_test_1
+│        │   └── index.html          # 첫 번째 스트림 HTML 파일
+│        ├── rtsp_test_2
+│        │   └── index.html          # 두 번째 스트림 HTML 파일
+│        ├── rtsp_test_3
+│        │   └── index.html          # 세 번째 스트림 HTML 파일
+│        ├── package.json            # 프로젝트 의존성 파일
+│        ├── package-lock.json
+│        └── Server.js               # 서버 코드
+│
+├── rtsp_test_1
+│        ├── node_modules            # 첫 번째 스트림의 Node.js 모듈
+│        ├── index.js                # 첫 번째 스트림 관련 서버 코드
+│        ├── package.json            # 첫 번째 스트림 의존성 파일
+│        └── package-lock.json
+├── rtsp_test_2
+│        ├── node_modules            # 두 번째 스트림의 Node.js 모듈
+│        ├── index.js                # 두 번째 스트림 관련 서버 코드
+│        ├── package.json            # 두 번째 스트림 의존성 파일
+│        └── package-lock.json
+└── rtsp_test_3
+         ├── node_modules            # 세 번째 스트림의 Node.js 모듈
+         ├── index.js                # 세 번째 스트림 관련 서버 코드
+         ├── package.json            # 세 번째 스트림 의존성 파일
+         └── package-lock.json
+	 
 ## 주요 기능
 - **RTSP 스트리밍**: RTSP URL을 통해 실시간 스트리밍을 수신하고 처리합니다.
 - **웹 인터페이스**: 웹 브라우저에서 실시간으로 비디오 스트리밍을 시청할 수 있습니다.
@@ -138,7 +169,7 @@ app.listen(PORT, () => {
 </html>
 ```
 
-#### 클라이언트 코드 (`rtsp_test_1\index.js`)
+#### RTSP 스트림 처리 코드 (`rtsp_test_1\index.js`)
 ```javascript
 const Stream = require('node-rtsp-stream');
 
