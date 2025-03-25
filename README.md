@@ -1,4 +1,4 @@
-# 실시간 RTSP 스트리밍 웹페이지
+# Node.js와 FFmpeg를 활용한 실시간 RTSP 스트리밍 웹페이지
 
 <img src="https://i.ibb.co/ttnjX4d/rtsp-streaming-web.png" alt="rtsp-streaming-web" border="0">
 
