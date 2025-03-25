@@ -10,32 +10,16 @@ rtsp-streaming-web<br>
 │   └── public<br>
 │        ├── node_modules            # 공통 Node.js 모듈<br>
 │        ├── rtsp_test_1<br>
-│        │   └── index.html          # 첫 번째 스트림 HTML 파일<br>
-│        ├── rtsp_test_2<br>
-│        │   └── index.html          # 두 번째 스트림 HTML 파일<br>
-│        ├── rtsp_test_3<br>
-│        │   └── index.html          # 세 번째 스트림 HTML 파일<br>
+│        │   └── index.html          # 스트림 HTML 파일<br>
 │        ├── package.json            # 프로젝트 의존성 파일<br>
 │        ├── package-lock.json<br>
 │        └── Server.js               # 서버 코드<br>
 │<br>
-├── rtsp_test_1<br>
-│        ├── node_modules            # 첫 번째 스트림의 Node.js 모듈<br>
-│        ├── index.js                # 첫 번째 스트림 관련 서버 코드<br>
-│        ├── package.json            # 첫 번째 스트림 의존성 파일<br>
-│        └── package-lock.json<br>
-│<br>
-├── rtsp_test_2<br>
-│        ├── node_modules            # 두 번째 스트림의 Node.js 모듈<br>
-│        ├── index.js                # 두 번째 스트림 관련 서버 코드<br>
-│        ├── package.json            # 두 번째 스트림 의존성 파일<br>
-│        └── package-lock.json<br>
-│<br>
-└── rtsp_test_3<br>
-         ├── node_modules            # 세 번째 스트림의 Node.js 모듈<br>
-         ├── index.js                # 세 번째 스트림 관련 서버 코드<br>
-         ├── package.json            # 세 번째 스트림 의존성 파일<br>
-         └── package-lock.json<br>
+└── rtsp_test_1<br>
+      ├── node_modules            # 스트림의 Node.js 모듈<br>
+      ├── index.js                # 스트림 관련 서버 코드<br>
+      ├── package.json            # 스트림 의존성 파일<br>
+      └── package-lock.json<br>
 	 
 ## 주요 기능
 - **RTSP 스트리밍**: RTSP URL을 통해 실시간 스트리밍을 수신하고 처리합니다.
