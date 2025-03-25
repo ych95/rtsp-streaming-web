@@ -5,6 +5,7 @@
 
 ## 폴더 구조
 rtsp-streaming-web<br>
+│<br>
 ├── rtsp<br>
 │   └── public<br>
 │        ├── node_modules            # 공통 Node.js 모듈<br>
@@ -23,11 +24,13 @@ rtsp-streaming-web<br>
 │        ├── index.js                # 첫 번째 스트림 관련 서버 코드<br>
 │        ├── package.json            # 첫 번째 스트림 의존성 파일<br>
 │        └── package-lock.json<br>
+│<br>
 ├── rtsp_test_2<br>
 │        ├── node_modules            # 두 번째 스트림의 Node.js 모듈<br>
 │        ├── index.js                # 두 번째 스트림 관련 서버 코드<br>
 │        ├── package.json            # 두 번째 스트림 의존성 파일<br>
 │        └── package-lock.json<br>
+│<br>
 └── rtsp_test_3<br>
          ├── node_modules            # 세 번째 스트림의 Node.js 모듈<br>
          ├── index.js                # 세 번째 스트림 관련 서버 코드<br>
