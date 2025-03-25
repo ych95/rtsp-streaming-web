@@ -3,10 +3,13 @@
 이 프로젝트는 **Node.js**와 **FFmpeg**를 활용하여 실시간 RTSP 스트리밍을 처리하고 웹페이지로 제공하는 시스템을 구현한 것입니다.  
 이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고, WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
 
+## RTSP 주소 출처
+[공공데이터포털-충청남도 천안시_교통정보 CCTV](https://www.data.go.kr/data/15063717/fileData.do?recommendDataYn=Y)
+
 ## 폴더 구조
-rtsp-streaming-web<br>
+**rtsp-streaming-web**<br>
 │<br>
-├── rtsp<br>
+├── **rtsp**<br>
 │   └── public<br>
 │        ├── node_modules            # 공통 Node.js 모듈<br>
 │        ├── rtsp_test_1<br>
@@ -15,7 +18,7 @@ rtsp-streaming-web<br>
 │        ├── package-lock.json<br>
 │        └── Server.js               # 서버 코드<br>
 │<br>
-└── rtsp_test_1<br>
+└── **rtsp_test_1**<br>
       ├── node_modules            # 스트림의 Node.js 모듈<br>
       ├── index.js                # 스트림 관련 서버 코드<br>
       ├── package.json            # 스트림 의존성 파일<br>
@@ -89,41 +92,52 @@ app.listen(PORT, () => {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>충청남도 천안시_교통정보 CCTV</title>
+	<title>익산 CCTV</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsmpeg/0.2/jsmpg.js"></script>
 	<style>
+        /* 부모 요소에 flexbox를 적용하여 가로로 배열 */
 		#streams {
 			display: flex;
 			flex-wrap: wrap; /* 화면 너비 따라 줄 바꿈 */
-			justify-content: center;
 		}
 		.stream-container {
 			margin-bottom: 20px; /* 스트림 간의 간격을 조정 */
 		}
 		canvas {
-			width: 950px;
-			height: 500px;
+			width: 200px;
+			height: 160px;
 			border: 2px solid black;
-			margin: 5px;
+			margin-left:5px;
 		}
 		.title {
             text-align: center;
-			font-size: 30px;
+			font-size: 18px;
 			font-weight: bold;
 			margin-bottom: 5px; /* 제목과 캔버스 간의 간격 조정 */
+			margin: 5px;
 		}
 	</style>
 </head>
 <body>
 	<div id="streams"></div>
-
 	<script>
 		const streamUrls = [
-		    { name: '세집매 삼거리', port: 10000 },
-        { name: '서부역 입구 삼거리', port: 10001 },
-        { name: '역말 오거리', port: 10002 },
-        { name: '천안로사거리', port: 10003 },
-        { name: '상명대 입구 삼거리', port: 10004 }
+			{ name: '세집매 삼거리', port: 10000 },
+			{ name: '서부역 입구 삼거리', port: 10001 },
+			{ name: '역말 오거리', port: 10002 },
+			{ name: '천안로사거리', port: 10003 },
+			{ name: '상방죽안오거리', port: 10004 },
+			{ name: '천안역', port: 10005 },
+			{ name: '남부오거리', port: 10006 },
+			{ name: '교보사거리', port: 10007 },
+			{ name: '청삼교차로', port: 10008 },
+			{ name: '신방삼거리', port: 10009 },
+			{ name: '이마트 사거리', port: 10010 },
+			{ name: '쌍용사거리', port: 10011 },
+			{ name: '봉서사거리', port: 10012 },
+			{ name: '구상골 사거리', port: 10013 },
+			{ name: '인쇄창사거리', port: 10014 },
+			{ name: '부성초교사거리', port: 10015 }
 		];
 
 		const streamsContainer = document.getElementById('streams');
@@ -161,12 +175,26 @@ app.listen(PORT, () => {
 const Stream = require('node-rtsp-stream');
 
 // RTSP 스트림 URL 목록
+const Stream = require('node-rtsp-stream');
+
+// RTSP 스트림 URL 목록
 var rtspList = [
-    { url: 'rtsp://210.99.70.120:1935/live/cctv001.stream', name: '세집매 삼거리' },
-    { url: 'rtsp://210.99.70.120:1935/live/cctv002.stream', name: '서부역 입구 삼거리' },
-    { url: 'rtsp://210.99.70.120:1935/live/cctv003.stream', name: '역말 오거리' },
-    { url: 'rtsp://210.99.70.120:1935/live/cctv004.stream', name: '천안로사거리' },
-    { url: 'rtsp://210.99.70.120:1935/live/cctv005.stream', name: '상명대 입구 삼거리' }
+        { url: 'rtsp://210.99.70.120:1935/live/cctv001.stream', name: '세집매 삼거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv002.stream', name: '서부역 입구 삼거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv003.stream', name: '역말 오거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv004.stream', name: '천안로사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv006.stream', name: '방죽안오거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv007.stream', name: '천안역' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv008.stream', name: '남부오거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv009.stream', name: '교보사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv010.stream', name: '청삼교차로' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv011.stream', name: '신방삼거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv012.stream', name: '이마트 사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv013.stream', name: '쌍용사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv014.stream', name: '봉서사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv015.stream', name: '구상골 사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv016.stream', name: '인쇄창사거리' },
+        { url: 'rtsp://210.99.70.120:1935/live/cctv017.stream', name: '부성초교사거리' }
 ];
 
 var rtspListLength = rtspList.length;
