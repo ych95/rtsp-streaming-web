@@ -4,11 +4,11 @@
 이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고, WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
 
 ## 폴더 구조
-rtsp-streaming-web
-├── rtsp
-│   └── public
-│        ├── node_modules            # 공통 Node.js 모듈
-│        ├── rtsp_test_1
+rtsp-streaming-web<br>
+├── rtsp<br>
+│   └── public<br>
+│        ├── node_modules            # 공통 Node.js 모듈<br>
+│        ├── rtsp_test_1<br>
 │        │   └── index.html          # 첫 번째 스트림 HTML 파일
 │        ├── rtsp_test_2
 │        │   └── index.html          # 두 번째 스트림 HTML 파일
