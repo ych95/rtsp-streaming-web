@@ -222,6 +222,8 @@ obj.stream = stream;
 
 ## 네트워크 통신 경로
 
+<img src="https://i.ibb.co/9mwpZ6NH/RTSP.png" alt="RTSP" border="0">
+
 > 1. 웹서버 실행 (server.js)<br>
 Express 서버가 시작되어 포트 3000에서 대기합니다.<br>
 사용자가 /test1 경로로 접근할 때 index.html을 제공하도록 설정합니다.
