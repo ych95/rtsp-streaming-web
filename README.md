@@ -222,7 +222,7 @@ obj.stream = stream;
 
 ## 네트워크 통신 경로
 
-<img src="https://i.ibb.co/9mwpZ6NH/RTSP.png" alt="RTSP" border="0">
+<img src="https://i.ibb.co/wNWbLGpL/RTSP.png" alt="RTSP" border="0">
 
 > 1. 웹서버 실행 (server.js)<br>
 Express 서버가 시작되어 포트 3000에서 대기합니다.<br>
