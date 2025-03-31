@@ -222,7 +222,7 @@ obj.stream = stream;
 
 ## 네트워크 통신 경로
 
-> 1. 웹서버 실행 (server.js)
+> 1. 웹서버 실행 (server.js)<br>
 Express 서버가 시작되어 포트 3000에서 대기합니다.<br>
 사용자가 /test1 경로로 접근할 때 index.html을 제공하도록 설정합니다.
 ```
@@ -232,7 +232,7 @@ Express 서버가 시작되어 포트 3000에서 대기합니다.<br>
     });
 ```
 
-> 2. RTSP 스트림 변환 및 WebSocket 서버 시작 (index.js)
+> 2. RTSP 스트림 변환 및 WebSocket 서버 시작 (index.js)<br>
 RTSP 스트림 목록을 순회하여 각 스트림에 대해 웹 소켓 포트를 지정하고 FFmpeg 옵션을 적용하여 새로운 스트림 객체를 생성한 후,<br>
 해당 스트림 객체를 원래 스트림 정보 객체에 저장합니다.<br>
 WebSocket 서버가 포트 10000부터 시작하여 각 스트림에 대해 하나씩 생성됩니다.
@@ -250,7 +250,7 @@ streamUrls.forEach((streamInfo, index) => {
 });
 ```
 
-> 3. 클라이언트가 웹 페이지 요청 (index.html)
+> 3. 클라이언트가 웹 페이지 요청 (index.html)<br>
 사용자가 브라우저에서 http://<서버 IP>:3000/test1로 접근합니다.<br>
 Express 서버는 index.html 파일을 클라이언트에 전송합니다.
 ```
@@ -259,7 +259,7 @@ app.get('/test1', (req, res) => {
 });
 ```
 
-> 4. 웹 페이지 로드 및 WebSocket 클라이언트 생성 (index.html)
+> 4. 웹 페이지 로드 및 WebSocket 클라이언트 생성 (index.html)<br>
 클라이언트의 브라우저는 index.html 파일을 로드하고, JavaScript 코드를 실행합니다.<br>
 각 스트림에 대해 WebSocket 클라이언트를 생성하여 ws://192.168.100.200:3000 등의 주소로 연결합니다.
 ```
@@ -272,7 +272,7 @@ new jsmpeg(client, {
 });
 ```
 
-> 5. WebSocket을 통한 스트림 데이터 수신 및 렌더링 (index.html)
+> 5. WebSocket을 통한 스트림 데이터 수신 및 렌더링 (index.html)<br>
 WebSocket 클라이언트는 서버와 연결되어 스트림 데이터를 수신합니다.<br>
 jsmpeg 라이브러리를 통해 스트림 데이터를 canvas에 렌더링합니다.
 ```
