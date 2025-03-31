@@ -223,8 +223,8 @@ obj.stream = stream;
 ## 네트워크 통신 경로
 
 > 1. 웹서버 실행 (server.js)
->> Express 서버가 시작되어 포트 3000에서 대기합니다.
->> 사용자가 /test1 경로로 접근할 때 index.html을 제공하도록 설정합니다.
+Express 서버가 시작되어 포트 3000에서 대기합니다.
+사용자가 /test1 경로로 접근할 때 index.html을 제공하도록 설정합니다.
 ```
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
