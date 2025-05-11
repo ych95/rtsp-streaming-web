@@ -2,8 +2,8 @@
 
 <img src="https://i.ibb.co/ttnjX4d/rtsp-streaming-web.png" alt="rtsp-streaming-web" border="0">
 
-이 프로젝트는 **Node.js**와 **FFmpeg**를 활용하여 실시간 RTSP 스트리밍을 처리하고 웹페이지로 제공하는 시스템을 구현한 것입니다.  
-이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고, WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
+이 프로젝트는 **Node.js**와 **FFmpeg**를 활용하여<br>실시간 RTSP 스트리밍을 처리하고<br>웹페이지로 제공하는 시스템을 구현한 것입니다.  
+이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고,<br> WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
 
 ## RTSP 주소 출처
 [공공데이터포털-충청남도 천안시_교통정보 CCTV](https://www.data.go.kr/data/15063717/fileData.do?recommendDataYn=Y)
