@@ -5,10 +5,10 @@
 이 프로젝트는 **Node.js**와 **FFmpeg**를 활용하여<br>실시간 RTSP 스트리밍을 처리하고<br>웹페이지로 제공하는 시스템을 구현한 것입니다.  
 이 웹 애플리케이션은 RTSP 스트리밍을 HTTP로 변환하고,<br> WebSocket을 통해 실시간으로 웹 브라우저에 스트리밍을 제공합니다.
 
-## RTSP 주소 출처
+## ㅁ RTSP 주소 출처
 [공공데이터포털-충청남도 천안시_교통정보 CCTV](https://www.data.go.kr/data/15063717/fileData.do?recommendDataYn=Y)
 
-## 폴더 구조
+## ㅁ 폴더 구조
 **rtsp-streaming-web**<br>
 │<br>
 ├── **rtsp**<br>
@@ -26,19 +26,19 @@
       ├── package.json            # 스트림 의존성 파일<br>
       └── package-lock.json<br>
 	 
-## 주요 기능
+## ㅁ 주요 기능
 - **RTSP 스트리밍**: RTSP URL을 통해 실시간 스트리밍을 수신하고 처리합니다.
 - **웹 인터페이스**: 웹 브라우저에서 실시간으로 비디오 스트리밍을 시청할 수 있습니다.
 - **FFmpeg** 활용: FFmpeg를 이용하여 RTSP 스트림을 HTTP로 변환하여 웹에서 재생합니다.
 - **WebSocket**: Node.js의 WebSocket 서버를 사용하여 실시간 스트리밍을 클라이언트에게 전달합니다.
 
-## 사용 기술
+## ㅁ 사용 기술
 - **Node.js**: 서버 사이드 개발 및 WebSocket 서버 구현
 - **FFmpeg**: RTSP 스트림을 HTTP 형식으로 변환하여 전송
 - **WebSocket**: 실시간 데이터 전송
 - **HTML5 Video**: 웹에서 실시간 스트리밍을 재생하기 위해 `<canvas>`를 활용
 
-## 설치 방법
+## ㅁ 설치 방법
 이 프로젝트를 로컬에서 실행하려면 아래 단계를 따라주세요:
 
 ### 1. Node.js 설치
@@ -220,7 +220,7 @@ obj.stream = stream;
 }
 ```
 
-## 네트워크 통신 경로
+## ㅁ 네트워크 통신 경로
 
 <img src="https://i.ibb.co/YTVqcNkG/RTSP.png" alt="RTSP" border="0" width="100%">
 
