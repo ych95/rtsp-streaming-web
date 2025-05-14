@@ -54,9 +54,9 @@ git clone https://github.com/ych95/rtsp-streaming-web.git
 cd rtsp-streaming-web
 ```
 
-### **코드 설명**
+## ㅁ 코드 설명
 
-#### 서버 코드 (`server.js`)
+### 1. 서버 코드 (`server.js`)
 ```javascript
 const express = require('express');
 const path = require('path');
@@ -88,7 +88,7 @@ app.listen(PORT, () => {
 });
 ```
 
-#### 클라이언트 코드 (`public\rtsp_test_1\index.html`)
+### 2. 클라이언트 코드 (`public\rtsp_test_1\index.html`)
 ```HTML
 <!DOCTYPE html>
 <html lang="en">
@@ -172,7 +172,7 @@ app.listen(PORT, () => {
 </html>
 ```
 
-#### RTSP 스트림 처리 코드 (`rtsp_test_1\index.js`)
+### 3. RTSP 스트림 처리 코드 (`rtsp_test_1\index.js`)
 ```javascript
 const Stream = require('node-rtsp-stream');
 
